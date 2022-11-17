@@ -1,0 +1,32 @@
+name: 'k8s helm deploy'
+description: 'use helm to deploy to k8s'
+inputs: 
+  PROJECT: 
+    required: true
+  APP:
+    required: true
+  SERVICE:
+    required: true    
+  INSTANCE:
+    required: true
+  VERSION:
+    required: true
+  VALUE_FILES:
+    required: true
+    default: ".github/helm/values.yaml"
+  RELEASE:
+    required: true
+  CHART:
+    required: true
+  CHART_REPO:
+    required: false
+  CHART_REPO_ALIAS:
+    required: false
+  KUBECONFIG_FILE:
+    required: true
+  TIMEOUT:
+    required: true
+    default: "2m0s"
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
