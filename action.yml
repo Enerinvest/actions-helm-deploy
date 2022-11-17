@@ -34,6 +34,8 @@ inputs:
     required: true
   AWS_SECRET_KEY: 
     required: true    
+  UNINSTALL: 
+    required: false    
 runs:
   using: 'docker'
   image: 'Dockerfile'
