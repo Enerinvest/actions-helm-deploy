@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-echo "$INPUT_KUBECONFIG_FILE" > .kubeconfig
+echo "$INPUT_KUBECONFIG_FILE" |base64 -d > .kubeconfig
 export KUBECONFIG=.kubeconfig
 
 if [ -n "$INPUT_CHART_REPO" ]; then
