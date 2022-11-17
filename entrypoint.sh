@@ -3,6 +3,8 @@
 
 echo "$INPUT_KUBECONFIG_FILE" |base64 -d > .kubeconfig
 export KUBECONFIG=.kubeconfig
+export AWS_ACCESS_KEY_ID="$INPUT_AWS_ACCESS_KEY"
+export AWS_SECRET_ACCESS_KEY="$INPUT_AWS_SECRET_KEY"
 
 if [ -n "$INPUT_UNINSTALL" ]; then
 
