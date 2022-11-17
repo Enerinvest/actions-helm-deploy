@@ -27,6 +27,13 @@ inputs:
   TIMEOUT:
     required: true
     default: "2m0s"
+  AWS_REGION: 
+    required: false
+    default: "eu-west-1"      
+  AWS_ACCESS_KEY:
+    required: true
+  AWS_SECRET_KEY: 
+    required: true    
 runs:
   using: 'docker'
   image: 'Dockerfile'

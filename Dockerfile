@@ -1,4 +1,4 @@
-FROM dtzar/helm-kubectl:3.8.2
+FROM public.ecr.aws/everinvest/kubectl-eks:2.0
 
 COPY entrypoint.sh /entrypoint.sh
 
